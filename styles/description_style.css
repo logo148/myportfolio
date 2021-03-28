@@ -1,0 +1,269 @@
+/*文字區*/
+.text {
+    margin: 10px;
+    padding: 3px;
+}
+
+/*標題*/
+.text>h2 {
+    margin: 5px 15px;
+    border-bottom: 1px solid #888;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.4em;
+    font-weight: 500;
+}
+
+.text>p {
+    margin: 5px 15px;
+    padding: 5px;
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/*附註*/
+.text>h4 {
+    margin: 20px 15px 10px;
+    padding: 5px;
+    width: 100px;
+    border-bottom: 1px solid #888;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.4em;
+    font-weight: 400;
+}
+
+.text>ul {
+    margin: 10px 15px;
+    list-style: none;
+}
+
+.text>ul>li {
+    margin: 10px;
+}
+
+.text>ul>li>img {
+    vertical-align: middle;
+}
+
+.text>ul>li>span {
+    font-size: 0.9em;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.description * {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.description {
+    padding: 0 20px;
+}
+
+.description>h2 {
+    margin: 20px 0 10px;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #888;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.description>h3 {
+    margin: 20px 10px 0;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}
+
+.description>pre {
+    font-weight: 300;
+    margin: 10px;
+    tab-size: 4;
+}
+
+.description>p {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-weight: 300;
+    background-color: #f0f0f0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.description>p.preface {
+    margin: 25px 10px;
+    background-color: #e0e0e0;
+    font-size: 1.2em;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.description>div>img {
+    margin: 10px;
+    padding: 2px;
+    width: calc(100% - 20px);
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    vertical-align: middle;
+}
+
+
+#arrow,
+#arrow::after {
+    position:relative;
+    width:15px;
+    height:15px;
+    border-top:5px solid #f58420;
+    border-right:5px solid #f58420;
+}
+#arrow {
+    margin: 3px auto;
+    transform:rotate(135deg);
+}
+#arrow::after {
+    position: absolute;
+    content: " ";
+    top: 5px;
+    left: -10px;
+    transform:rotate(0);
+}
+
+
+
+.description>table {
+    margin: 10px;
+    height: auto;
+    width: calc(100% - 20px);
+    text-align: center;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border: 2px solid #aaa;
+}
+
+.description>table td {
+    border: 1px solid #aaa;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.description>ol,
+.description>ul {
+    margin: 10px;
+    padding: 5px 20px 5px 40px;
+    font-size: 1em;
+    font-weight: 300;
+    background-color: #f0f0f0;
+}
+
+.description>ol>li,
+.description>ul>li {
+    padding: 3px 0;
+    line-height: 1.6;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.description>p span,
+.description>ul span,
+.description>ol span {
+    display: inline-block;
+    margin: 1px 3px;
+    box-sizing: border-box;
+    padding: 0px 4px;
+    color: #f92472;
+    background-color: #f4dfe5;
+    border-radius: 10px;
+    font-weight: 400;
+
+}
+
+.description>ul.link {
+    margin: 50px 0;
+    padding: 10px 0 0 20px;
+    font-size: 1.2em;
+    font-weight: 300;
+    background-color: transparent;
+    border-top: 2px solid #888;
+    list-style-position: inside;
+}
+
+.description>ul.link>li {
+    margin: 10px 0;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.description>ul.link>li img {
+    vertical-align: middle;
+}
+
+
+
+/*圖片放大區*/
+.largerpic {
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    cursor: zoom-out;
+}
+.largerpic::before {
+    content:"";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.largerpic>img {
+    position: relative;
+    left: -2px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 20px);
+    max-height: calc(100vh - 20px);
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .text {
+        margin: 0;
+        margin-left: 10px;
+        width: 40%;
+        max-width: 400px;
+    }
+
+    .description {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 800px;
+    }
+
+    .description>h2 {
+        margin-top: 30px;
+    }
+
+    
+    .description>table {
+        max-width: 100%;
+    }
+
+    .description>div {
+        display: flex;
+    }
+    .description>div>img {
+        flex: auto;
+        width: 1px;
+    }
+    #arrow {
+        margin: auto 5px;
+        transform:rotate(45deg);
+    }
+    #arrow::after {
+        transform:rotate(0);
+    }
+
+}
+
+

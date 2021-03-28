@@ -1,0 +1,85 @@
+/*作品區*/
+.mainzone {
+    padding: 30px 10px;
+    color: transparent;
+    background-color: rgb(242, 235, 211);
+}
+
+/*說明區*/
+#titlearea {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 10px;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(242, 235, 211);
+    background-color: rgb(10, 189, 172);
+    cursor: pointer;
+}
+
+/*遊戲區*/
+#gamearea {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    position: relative;
+    border-collapse: collapse;
+}
+
+td.middle,
+td.center {
+    border-style: solid;
+    border-color: rgb(84, 84, 84);
+}
+
+td.middle {
+    border-width: 10px 0px;
+}
+
+td.center {
+    border-width: 0px 10px;
+}
+
+td.middle.center {
+    border-width: 10px 10px;
+}
+
+td canvas {
+    display: block;
+    cursor: pointer;
+}
+
+canvas#winnerline {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+}
+
+/*RWD*/
+@media screen and (min-width: 768px) {
+
+    #present {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px 50px;
+    }
+
+    .mainzone {
+        margin-right: 10px;
+        padding: 10px 0;
+        width: 60%;
+        min-width: 300px;
+        max-width: 600px;
+        background-color: transparent;
+    }
+
+}

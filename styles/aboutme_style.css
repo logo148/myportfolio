@@ -1,0 +1,305 @@
+/*banner*/
+.banner {
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(25deg, #244865, #4ca8e6);
+}
+
+.container {
+    color: snow;
+}
+
+.headshot>img {
+    margin: 10px;
+    width: 100px;
+    vertical-align: middle;
+}
+
+/*簡介*/
+.brief {
+    margin: 0 30px 20px;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.brief>h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.brief>p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 300;
+}
+
+.brief>blockquote {
+    margin-top: 10px;
+    color: #ffcc00;
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    font-size: 1.6em;
+    font-weight: 400;
+    text-align: left;
+}
+
+/*聯絡資訊*/
+.contact {
+    border-top: 1px solid #f7f7f7;
+    list-style: none;
+}
+
+.contact>li {
+    display: inline-block;
+    margin: 10px auto 15px;
+}
+
+.contact>li>span {
+    padding: 0 5px;
+    font-size: 0.6em;
+    font-weight: 300;
+}
+
+.contact>li>img {
+    vertical-align: middle;
+}
+
+/*內容區*/
+.intro {
+    padding: 20px;
+    font-weight: 100;
+}
+
+/*標題*/
+.intro>img {
+    vertical-align: middle;
+}
+
+.intro>h2 {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: 10px;
+    width: calc(100% - 54px);
+    color: #383447;
+    font-weight: 600;
+    vertical-align: bottom;
+    position: relative;
+}
+.intro>h2:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    bottom: -3px;
+    background-image: linear-gradient(90deg, #d1d9de, #f7f7f7);
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+/*標籤*/
+.tags {
+    margin-top: 10px;
+    margin-left: 50px;
+    font-weight: 400;
+}
+
+.tags>span {
+    display: inline-block;
+    margin: 3px 10px 3px 3px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.8em;
+    background-color: #6cb7eb;
+}
+
+.tags>span.date {
+    background-color: #ffcc00;
+}
+
+/*內文*/
+.intro>p {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.8;
+    border: none;
+    box-shadow: 2px 2px 10px 2px #cccccc;
+    margin: 30px 10px 30px 10px;
+    padding: 20px 30px;
+    background-color: #f5f5f5;
+}
+
+.intro>p.center {
+    margin: 30px 10px;
+    text-align: center;
+}
+
+.intro>p.end {
+    box-sizing: border-box;
+    border-left: 10px solid #244865;
+    color: snow;
+    background-image: linear-gradient(25deg, #306691, #4ca8e6);
+}
+
+.intro>h3 {
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 0 15px;
+    color: #f47720;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    clear: right;
+}
+
+.txt {
+    border-left: 3px solid #ccc;
+    margin: 10px 0 10px 14px;
+    padding: 10px 10px 10px 23px;
+
+}
+
+.txt>img {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 3px;
+    float: right;
+    width: 100%;
+    height: auto;
+}
+
+.txt>img.widepic {
+    float: none;
+    margin-top: 10px;
+}
+
+.txt>p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+
+/*列表*/
+.intro>ol {
+    border-left: 3px solid #ccc;
+    margin: 0 0 30px 14px;
+    padding-left: 23px;
+    font-weight: 300;
+}
+
+.intro>ol>li {
+    padding: 2px;
+}
+
+/*RWD*/
+@media screen and (min-width: 768px) {
+
+    .banner {
+        padding: 0px 0px 0;
+        text-align: left;
+    }
+
+    .container {
+        position: relative;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    .headshot {
+        display: inline-block;
+        margin: 0;
+        width: 100px; 
+        height: 235px;
+        background-color: #3c81b1;
+        vertical-align: middle;
+        padding-left: 15px;
+    }
+
+    .headshot::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .headshot>img {
+        display: inline-block;
+        margin: 0px;
+        max-width: calc(100% - 4px);
+        max-height: 100%;
+    }
+
+    .brief {
+        display: inline-block;
+        margin: 20px 20px 20px 10px;
+        padding-left: 30px;
+        max-width: calc(100% - 179px);
+    }
+
+    .brief::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 30px solid #3c81b1;
+        border-top: 116.5px solid transparent;
+        border-bottom: 116.5px solid transparent;
+        position: absolute;
+        top: 0px;
+        left: 115px;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact>li {
+        margin: 10px 10px 15px;
+    }
+    .intro {
+        /*padding: 30px;*/
+        margin: auto;
+        max-width: 800px;
+    }
+    .txt>img {
+        margin: 0 0 0 20px;
+        width: 40%;
+    }
+    .txt>img.widepic {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+    .intro>p.end {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        clear: right;
+    }
+
+}
+
+/*RWD banner*/
+@media screen and (min-width: 1094px) {
+
+    .brief {
+        max-width: 57%;
+    }
+
+    .contact {
+        display: inline-block;
+        text-align: left;
+        padding-left: 20px;
+        border: none;
+        border-left: 1px solid snow;
+        vertical-align: middle;
+    }
+
+    .contact>li {
+        display: block;
+        margin: 10px 0 15px;
+    }
+
+
+}
