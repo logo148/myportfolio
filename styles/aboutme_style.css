@@ -87,7 +87,7 @@
     vertical-align: bottom;
     position: relative;
 }
-.intro>h2:after {
+/*.intro>h2:after {
     content: '';
     display: block;
     width: 100%;
@@ -97,7 +97,7 @@
     position: absolute;
     z-index: -1;
     border-radius: 5px;
-}
+}*/
 
 /*標籤*/
 .tags {
